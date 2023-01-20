@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-function TaskForm() {
+function TaskForm({createTask}) {
     const [title, setTitle] = useState("")
 
     const handerSumbit = (e) => {
         e.preventDefault()
-        console.log(title)
+        createTask(title)
     }
 
   return (<form onSubmit={handerSumbit}>
