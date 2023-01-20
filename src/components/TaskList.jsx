@@ -1,8 +1,3 @@
-
-
-
-//console.log(data)
-
 import TaskCard from "./TaskCard";
 
 function TasksList({tasks}) {
