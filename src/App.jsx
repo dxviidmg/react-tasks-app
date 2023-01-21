@@ -14,9 +14,14 @@ export default function App(){
   function createTask(task){
     setTasks([...tasks, {title: task.title, id: tasks.length, description: task.description}])
   }
+
+  function deleteTask(id){
+    setTasks(tasks.filter(task => task.id !== id))
+  }
+
   return (<>
     <TaskForm createTask={createTask}/>
-    <TasksList tasks={tasks}/>
+    <TasksList tasks={tasks} deleteTask={deleteTask}/>
   </>)
 }
 
