@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {TaskContext} from '../context/TaskContext'
 
 function TaskCard({task, deleteTask}) {
-  function mostrarAlerta(){
-    alert(task.id)
-  }
-
+  
+  const v = useContext(TaskContext)
+  console.log(v)
+  
   return (
-    <div id={task.id}>
+    <div>
     <h1>{task.title}</h1>
     <p>{task.description}</p>
     <button onClick={() => deleteTask(task.id)}>Eliminar tarea</button>
