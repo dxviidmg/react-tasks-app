@@ -1,9 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext} from 'react'
+import { TaskContext } from '../context/TaskContext'
 
-function TaskForm({createTask}) {
+TaskContext
+function TaskForm() {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
+
+    const {createTask} = useContext(TaskContext)
 
     const handerSumbit = (e) => {
         e.preventDefault()
