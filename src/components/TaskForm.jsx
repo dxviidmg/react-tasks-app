@@ -13,7 +13,7 @@ function TaskForm({createTask}) {
     }
 
   return (<form onSubmit={handerSumbit}>
-        <input placeholder='Escribe tu tarea' onChange={(e) => setTitle(e.target.value)} value={title} autoFocus/>
+        <input placeholder='Escribe tu tarea bro' onChange={(e) => setTitle(e.target.value)} value={title} autoFocus/>
         <textarea placeholder='Escribe la descripción' onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
 
         <button> Guardar</button>
